@@ -15,6 +15,7 @@
   	<servlet-name>appJDBCServlet</servlet-name>
   	<url-pattern>/AppController</url-pattern>
   </servlet-mapping>
+  
   <servlet>
   	<servlet-name>enrollJDBCServlet</servlet-name>
   	<servlet-class>com.myApp.controller.EnrollController</servlet-class>
@@ -24,4 +25,15 @@
   	<servlet-name>enrollJDBCServlet</servlet-name>
   	<url-pattern>/EnrollController</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>contactJDBCServlet</servlet-name>
+  	<servlet-class>com.myApp.controller.ContactController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>contactJDBCServlet</servlet-name>
+  	<url-pattern>/ContactController</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

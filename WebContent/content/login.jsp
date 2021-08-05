@@ -103,7 +103,6 @@
 								</div>
 
 								<div class="col-lg-9 col-lg-offset-3">
-									<button class="btn btn-default">Cancel</button>
 
 									<button class="btn btn-primary">Login</button>
 								</div>

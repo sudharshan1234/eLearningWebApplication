@@ -38,11 +38,11 @@
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Explore<b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="contact.jsp">Add Contact</a></li>
+						<li><a href="content/contact.jsp">Add Contact</a></li>
 						<li class="divider"></li>
 						<li><a href="content/enroll.jsp">Enroll Course</a></li>
 						<li class="divider"></li>
-						<li><a href="feedback.jsp">Add Feedback</a></li>
+						<li><a href="content/feedback.jsp">Add Feedback</a></li>
 					</ul></li>
 			</ul>
 		</div>

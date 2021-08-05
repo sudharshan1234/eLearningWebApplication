@@ -62,7 +62,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="contact.jsp">Add Contact</a></li>
 						<li class="divider"></li>
-						<li><a href="content/enroll.jsp">Enroll Course</a></li>
+						<li><a href="enroll.jsp">Enroll Course</a></li>
 						<li class="divider"></li>
 						<li><a href="feedback.jsp">Add Feedback</a></li>
 					</ul></li>
@@ -121,7 +121,6 @@
 								</div>
 
 								<div class="col-lg-9 col-lg-offset-3">
-									<button class="btn btn-default">Cancel</button>
 
 									<button class="btn btn-primary" data-toggle="modal"
 										data-target="#themodal">Submit</button>
@@ -134,7 +133,7 @@
 													<h3>Course Enrollment</h3>
 												</div>
 												<div class="modal-body">
-													<p>Are you sure you want to do this?</p>
+													<p>Are you sure you want to enroll to this course?</p>
 													<div class="progress progress-striped active">
 														<div id="doitprogress" class="progress-bar"></div>
 													</div>

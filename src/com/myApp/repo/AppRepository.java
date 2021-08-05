@@ -28,15 +28,15 @@ public class AppRepository {
 	          prepStatement.setString(7, user.getUploadPhoto());
 	          prepStatement.executeUpdate();
 	          
-	          prepStatement = dbConnection.prepareStatement("select user_id from user1 where email= ? and password= ? ");
-	          prepStatement.setString(1, user.getEmail());
-	          prepStatement.setString(2, user.getPassword());
-	          ResultSet rs = prepStatement.executeQuery();
-	          if(rs!=null) {
-	        	  while(rs.next()) {
-	        		  User1.userId=rs.getInt("user_id");
-	        	  }
-	          }
+//	          prepStatement = dbConnection.prepareStatement("select user_id from user1 where email= ? and password= ? ");
+//	          prepStatement.setString(1, user.getEmail());
+//	          prepStatement.setString(2, user.getPassword());
+//	          ResultSet rs = prepStatement.executeQuery();
+//	          if(rs!=null) {
+//	        	  while(rs.next()) {
+//	        		  User1.userId=rs.getInt("user_id");
+//	        	  }
+//	          }
 	      } catch (SQLException e) {
 	          e.printStackTrace();
 	      }

@@ -164,8 +164,6 @@
 								</div>
 
 								<div class="col-lg-9 col-lg-offset-3">
-									<button class="btn btn-default">Cancel</button>
-
 									<button class="btn btn-primary" data-toggle="modal"
 										data-target="#themodal">Submit</button>
 									<div id="themodal" class="modal fade" data-backdrop="static">
@@ -177,7 +175,7 @@
 													<h3>Signup Form Submission</h3>
 												</div>
 												<div class="modal-body">
-													<p>Are you sure you want to do this?</p>
+													<p>Are you sure you submit the details?</p>
 													<div class="progress progress-striped active">
 														<div id="doitprogress" class="progress-bar"></div>
 													</div>

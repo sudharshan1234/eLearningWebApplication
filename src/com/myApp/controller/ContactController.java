@@ -7,24 +7,26 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.myApp.repo.EnrollRepository;
+
+import com.myApp.model.Contact;
+import com.myApp.repo.ContactRepository;
 
 /**
  * Servlet implementation class appController
  */
 
 @SuppressWarnings("serial")
-public class EnrollController extends HttpServlet {
-	private EnrollRepository enrollRepository;
+public class ContactController extends HttpServlet {
+	private ContactRepository contactRepository;
 
-	private static String app_ENROLL = "content/enroll.jsp";
+	private static String app_CONTACT = "content/contact.jsp";
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public EnrollController() {
+	public ContactController() {
 		super();
-		enrollRepository = new EnrollRepository();
+		contactRepository = new ContactRepository();
 	}
 
 	/**
@@ -33,7 +35,7 @@ public class EnrollController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {	
-		String forward = app_ENROLL;
+		String forward = app_CONTACT;
 		RequestDispatcher view = request.getRequestDispatcher(forward);
 		view.forward(request, response);
 	}
@@ -44,30 +46,24 @@ public class EnrollController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		String forward = "";		
-		
-		if (enrollRepository != null) {
-				if (enrollRepository.findIfEnrolled(request
-						.getParameter("courseId"))) {
-					request.setAttribute("message", "Already Enrolled. Try another Course");
-					forward = app_ENROLL;
-					RequestDispatcher view = request
-							.getRequestDispatcher(forward);
-					view.forward(request, response);
-					return;
-				}
-
-				try {
-					enrollRepository.saveCourse(Integer.parseInt(request.getParameter("courseId")));
-				} catch (NumberFormatException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				forward = app_ENROLL;
-				RequestDispatcher view = request.getRequestDispatcher(forward);
-				view.forward(request, response);
-			
+		String forward = "";	
+		Contact contact= new Contact();
+		String name=request.getParameter("name");
+		Long phoneNumber;
+		try {
+			phoneNumber = Long.parseLong(request.getParameter("phoneNumber"));
+			contact.setPhoneNumber(phoneNumber);
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		String email=request.getParameter("email");
+		String message=request.getParameter("message");
+		contact.setEmail(email);contact.setName(name);contact.setMessage(message);
+		
+		contactRepository.saveContact(contact);
+		
+		forward = app_CONTACT;
 		RequestDispatcher view = request.getRequestDispatcher(forward);
 		view.forward(request, response);
 	}
