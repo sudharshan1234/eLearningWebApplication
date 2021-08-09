@@ -316,7 +316,7 @@ textarea {
 }
 
 a {
-  color: #dd4814;
+  color: #003399;
   text-decoration: none;
 }
 
@@ -412,7 +412,7 @@ cite {
 }
 
 .text-primary {
-  color: #dd4814;
+  color: #003399;
 }
 
 .text-primary:hover {
@@ -2437,8 +2437,8 @@ fieldset[disabled] .btn-default.active {
 
 .btn-primary {
   color: #ffffff;
-  background-color: #dd4814;
-  border-color: #dd4814;
+  background-color: #003399;
+  border-color: #003399;
 }
 
 .btn-primary:hover,
@@ -2472,8 +2472,8 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #dd4814;
-  border-color: #dd4814;
+  background-color: #003399;
+  border-color: #003399;
 }
 
 .btn-warning {
@@ -2642,7 +2642,7 @@ fieldset[disabled] .btn-info.active {
 
 .btn-link {
   font-weight: normal;
-  color: #dd4814;
+  color: #003399;
   cursor: pointer;
   border-radius: 0;
 }
@@ -3629,7 +3629,7 @@ input[type="button"].btn-block {
 .dropdown-menu > li > a:focus {
   color: #ffffff;
   text-decoration: none;
-  background-color: #dd4814;
+  background-color: #003399;
 }
 
 .dropdown-menu > .active > a,
@@ -3637,7 +3637,7 @@ input[type="button"].btn-block {
 .dropdown-menu > .active > a:focus {
   color: #ffffff;
   text-decoration: none;
-  background-color: #dd4814;
+  background-color: #003399;
   outline: 0;
 }
 
@@ -4297,7 +4297,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #dd4814;
+  border-color: #003399;
 }
 
 .nav .open > a .caret,
@@ -4416,7 +4416,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #dd4814;
+  background-color: #003399;
 }
 
 .nav-pills > li.active > a .caret,
@@ -4499,8 +4499,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav .caret {
-  border-top-color: #dd4814;
-  border-bottom-color: #dd4814;
+  border-top-color: #003399;
+  border-bottom-color: #003399;
 }
 
 .nav a:hover .caret {
@@ -4967,7 +4967,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default {
-  background-color: #dd4814;
+  background-color: #003399;
   border-color: #bf3e11;
 }
 
@@ -5457,7 +5457,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .label-primary {
-  background-color: #dd4814;
+  background-color: #003399;
 }
 
 .label-primary[href]:hover,
@@ -5534,7 +5534,7 @@ a.badge:focus {
 
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #dd4814;
+  color: #003399;
   background-color: #ffffff;
 }
 
@@ -5605,7 +5605,7 @@ a.list-group-item.active > .badge,
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #dd4814;
+  border-color: #003399;
 }
 
 .thumbnail .caption {
@@ -5759,7 +5759,7 @@ a.thumbnail.active {
   line-height: 20px;
   color: #ffffff;
   text-align: center;
-  background-color: #dd4814;
+  background-color: #003399;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
           box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: width 0.6s ease;
@@ -5911,8 +5911,8 @@ a.list-group-item.active:hover,
 a.list-group-item.active:focus {
   z-index: 2;
   color: #ffffff;
-  background-color: #dd4814;
-  border-color: #dd4814;
+  background-color: #003399;
+  border-color: #003399;
 }
 
 a.list-group-item.active .list-group-item-heading,
@@ -6159,17 +6159,17 @@ a.list-group-item.active:focus .list-group-item-text {
 }
 
 .panel-primary {
-  border-color: #dd4814;
+  border-color: #003399;
 }
 
 .panel-primary > .panel-heading {
   color: #ffffff;
-  background-color: #dd4814;
-  border-color: #dd4814;
+  background-color: #003399;
+  border-color: #003399;
 }
 
 .panel-primary > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #dd4814;
+  border-top-color: #003399;
 }
 
 .panel-primary > .panel-heading > .dropdown .caret {
@@ -6177,7 +6177,7 @@ a.list-group-item.active:focus .list-group-item-text {
 }
 
 .panel-primary > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #dd4814;
+  border-bottom-color: #003399;
 }
 
 .panel-success {

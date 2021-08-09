@@ -19,7 +19,7 @@ public class ContactRepository {
 	      try {
 	          PreparedStatement prepStatement = dbConnection.prepareStatement("insert into contact values (?, ?, ?, ?, ?, contactid.nextval)");
 	          
-	          prepStatement.setInt(1, User1.userId);
+	          prepStatement.setInt(1, contact.getUserId());
 	          prepStatement.setString(2, contact.getName());
 	          prepStatement.setString(3, contact.getEmail());
 	          prepStatement.setLong(4, contact.getPhoneNumber());

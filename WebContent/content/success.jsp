@@ -38,11 +38,11 @@
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Explore<b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="content/contact.jsp">Add Contact</a></li>
+						<li><a href="contact">Add Contact</a></li>
 						<li class="divider"></li>
-						<li><a href="content/enroll.jsp">Enroll Course</a></li>
+						<li><a href="enroll">Enroll Course</a></li>
 						<li class="divider"></li>
-						<li><a href="content/feedback.jsp">Add Feedback</a></li>
+						<li><a href="feedback">Add Feedback</a></li>
 					</ul></li>
 			</ul>
 		</div>
@@ -54,19 +54,17 @@
 	 -->
 	<div class="panel panel-success">
 		<div class="panel-heading">
-			<h3 class="panel-title">Student Enrollment Login success</h3>
+			<h3 class="panel-title">Student Enrollment success</h3>
 		</div>
 		<div class="panel-body">
 		<div class="alert alert-dismissable alert-success">
               <button type="button" class="close" data-dismiss="alert">×</button>
-              <strong>Well done!</strong> You successfully logged-into the system. 
-              Now you can explore the complete features!
+              <strong>Well done! ${userName}</strong> ${successMessage}
             </div>
 		</div>
 	</div>
 	<div></div>
 	<div></div>
-	<a class="btn btn-primary" href="content/login.jsp">Login
-		as different user?</a>
+
 </body>
 </html>

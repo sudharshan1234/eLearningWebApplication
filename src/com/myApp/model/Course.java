@@ -3,7 +3,8 @@ package com.myApp.model;
 public class Course {
 
     private int courseId;
-    private String cName;
+    private int userId;
+	private String cName;
     private String cDesp;
     private String cFees;
     private String cResource;
@@ -18,6 +19,13 @@ public class Course {
     public void setCourseId(int courseId) {
         this.courseId = courseId;
     }
+    public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 
     public String getcName() {
         return cName;

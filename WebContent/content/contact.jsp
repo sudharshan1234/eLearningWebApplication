@@ -60,11 +60,11 @@
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Explore<b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="contact.jsp">Add Contact</a></li>
+						<li><a href="contact">Add Contact</a></li>
 						<li class="divider"></li>
-						<li><a href="enroll.jsp">Enroll Course</a></li>
+						<li><a href="enroll">Enroll Course</a></li>
 						<li class="divider"></li>
-						<li><a href="feedback.jsp">Add Feedback</a></li>
+						<li><a href="feedback">Add Feedback</a></li>
 					</ul></li>
 			</ul>
 		</div>
@@ -104,7 +104,7 @@
 				<div class="row">
 					<div class="col-lg-6">
 						<form id="myForm" method="post" class="bs-example form-horizontal"
-							action="../ContactController">
+							action="contact">
 							<fieldset>
 								<legend>Contact Addition Form</legend>
 								
@@ -143,7 +143,7 @@
 										Message</label>
 									<div class="col-lg-9">
 										<input type="text" class="form-control" name="message"
-											id="MessageInput" placeholder="Message" />
+											id="MessageInput" placeholder="Message" onkeyup="success()" />
 									</div>
 								</div>
 								
@@ -170,7 +170,7 @@
 													<a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
 													<input type="submit" value="Yes" id="yesbutton"
 														class="btn btn-primary" data-loading-text="Saving.."
-														data-complete-text="Submit Complete!">
+														data-complete-text="Submit Complete!" disabled>
 												</div>
 											</div>
 										</div>
@@ -191,7 +191,20 @@
 			$('#dateOfBirthInput').datepicker();
 		});
 	</script>
-
+	
+	<script type="text/javascript">
+	function success() {
+	 if(document.getElementById("NameInput").value==="" && 
+			 document.getElementById("phoneNumberInput").value==="" &&
+			 document.getElementById("emailInput").value==="" &&
+			 document.getElementById("MessageInput").value==="") { 
+            document.getElementById('yesbutton').disabled = true; 
+        } else { 
+            document.getElementById('yesbutton').disabled = false;
+        }
+    }
+	</script>
+	
 	<script type="text/javascript">
 		$(function() {
 			var yesButton = $("#yesbutton");

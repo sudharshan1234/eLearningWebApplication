@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.myApp.model.Course;
 import com.myApp.model.User1;
 import com.myApp.util.OracleConnUtils;
 
@@ -15,12 +16,12 @@ public class EnrollRepository {
 	      dbConnection = OracleConnUtils.getConnection();
 	  }
 	  
-	  public void saveCourse(int courseId) {
+	  public void saveCourse(Course course) {
 	      try {
 	          PreparedStatement prepStatement = dbConnection.prepareStatement("insert into enroll values (?, ?)");
 	          
-	          prepStatement.setInt(1, User1.userId);
-	          prepStatement.setInt(2, courseId);
+	          prepStatement.setInt(1, course.getUserId());
+	          prepStatement.setInt(2, course.getCourseId());
 	     
 	          prepStatement.executeUpdate();
 	      } catch (SQLException e) {
@@ -28,15 +29,15 @@ public class EnrollRepository {
 	      }
 	  }
 
-	public boolean findIfEnrolled(String parameter) {
+	public boolean findIfEnrolled(Course course) {
 		try {
 	          PreparedStatement prepStatement = dbConnection.prepareStatement("select course_id from enroll where user_id = ?");
-	          prepStatement.setString(1, String.valueOf(User1.userId));   
+	          prepStatement.setString(1, String.valueOf(course.getUserId()));   
 	                      
 	          ResultSet result = prepStatement.executeQuery();
 	          if (result != null) {   
 	              while (result.next()) {
-	                  if (result.getInt(1) == Integer.parseInt(parameter)) {
+	                  if (result.getInt(1) == course.getCourseId()) {
 	                      return true;
 	                  }               
 	              }

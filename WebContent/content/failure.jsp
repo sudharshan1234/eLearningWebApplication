@@ -58,14 +58,12 @@
 		<div class="panel-body">
 			<div class="alert alert-dismissable alert-danger">
 				<button type="button" class="close" data-dismiss="alert">×</button>
-				<strong>Oh snap!</strong> Something is wrong. Change a few things up
-				and try submitting again.
+				<strong>Oh snap!</strong> ${failMessage}
 			</div>
 		</div>
 	</div>
 	<div></div>
 	<div></div>
 
-	<a class="btn btn-primary" href="content/login.jsp">Try again?</a>
 </body>
 </html>

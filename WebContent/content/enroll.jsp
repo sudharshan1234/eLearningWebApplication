@@ -60,11 +60,11 @@
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Explore<b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="contact.jsp">Add Contact</a></li>
+						<li><a href="contact">Add Contact</a></li>
 						<li class="divider"></li>
-						<li><a href="enroll.jsp">Enroll Course</a></li>
+						<li><a href="enroll">Enroll Course</a></li>
 						<li class="divider"></li>
-						<li><a href="feedback.jsp">Add Feedback</a></li>
+						<li><a href="feedback">Add Feedback</a></li>
 					</ul></li>
 			</ul>
 		</div>
@@ -105,20 +105,22 @@
 				<div class="row">
 					<div class="col-lg-6">
 						<form id="myForm" method="post" class="bs-example form-horizontal"
-							action="../EnrollController">
+							action="enroll">
 							<fieldset>
 								<legend>Course Enrollment Form</legend>
-								
-								<input type="hidden" name="pageName" value="signup">
-
+																
 								<div class="form-group">
 									<label for="CourseIdInput" class="col-lg-3 control-label">Choose
 										Course</label>
 									<div class="col-lg-9">
-										<input type="text" class="form-control" name="courseId"
-											id="CourseIdInput" placeholder="courseId" />
+										<select name="courseId" id="CourseIdInput">
+										  <option value="111">JAVA</option>
+										  <option value="112">C Programming</option>
+										  <option value="113">C++ Programming</option>
+										</select>
 									</div>
 								</div>
+								
 
 								<div class="col-lg-9 col-lg-offset-3">
 
@@ -142,7 +144,7 @@
 													<a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
 													<input type="submit" value="Yes" id="yesbutton"
 														class="btn btn-primary" data-loading-text="Saving.."
-														data-complete-text="Submit Complete!">
+														data-complete-text="Submit Complete!" >
 												</div>
 											</div>
 										</div>
@@ -163,6 +165,7 @@
 			$('#dateOfBirthInput').datepicker();
 		});
 	</script>
+	
 
 	<script type="text/javascript">
 		$(function() {

@@ -51,13 +51,6 @@
 				<li><a href="/eLearningApplication">Home</a></li>
 				<li><a href="signup.jsp">Signup</a></li>
 				<li class="active"><a href="login.jsp">Login</a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Explore<b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Contact us</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Further Actions</a></li>
-					</ul></li>
 			</ul>
 		</div>
 		<!-- /.nav-collapse -->

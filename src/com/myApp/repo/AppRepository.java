@@ -5,6 +5,8 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.myApp.model.User1;
 import com.myApp.util.OracleConnUtils;
@@ -68,15 +70,6 @@ public class AppRepository {
 	          
 	          ResultSet result = prepStatement.executeQuery();
 	          
-	          prepStatement = dbConnection.prepareStatement("select user_id from user1 where email= ? and password= ? ");
-	          prepStatement.setString(1, email);
-	          prepStatement.setString(2, password);
-	          ResultSet rs = prepStatement.executeQuery();
-	          if(rs!=null) {
-	        	  while(rs.next()) {
-	        		  User1.userId=rs.getInt("user_id");
-	        	  }
-	          }
 	          if (result != null) {
 	              while (result.next()) {
 	                  if (result.getString(1).equals(password)) {
@@ -88,5 +81,30 @@ public class AppRepository {
 	          e.printStackTrace();
 	      }
 	      return false;
+	  }
+	  
+	  public List getIdName(String email, String password) {
+		  
+		  ArrayList out=new ArrayList<>();
+          try {
+			PreparedStatement prepStatement = dbConnection.prepareStatement("select password from user1 where email = ?");
+			  prepStatement = dbConnection.prepareStatement("select user_id,name from user1 where email= ? and password= ? ");
+			  prepStatement.setString(1, email);
+			  prepStatement.setString(2, password);
+			  ResultSet rs = prepStatement.executeQuery();
+			  if(rs!=null) {
+				  while(rs.next()) {
+					  out.add(rs.getInt("user_id"));
+					  out.add(rs.getString("name"));
+					  return out;
+				  }
+			  }
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+         
+        return null;
+		  
 	  }
 }

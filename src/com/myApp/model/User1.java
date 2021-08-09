@@ -4,8 +4,8 @@ import java.sql.Date;
 
 public class User1 {
 
-    public static int userId;
-    private String name;
+    private int userId;
+	private String name;
     private long phoneNumber;
     private String email;
     private String address;
@@ -16,6 +16,14 @@ public class User1 {
     public User1() {
     }
 
+    public int getUserId() {
+		return userId;
+	}
+
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 
     public String getName() {
         return name;

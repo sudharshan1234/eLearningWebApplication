@@ -6,10 +6,17 @@
 body {
 	height: 100%;
 	margin: 0;
-	background: url(assets/img/books.jpg);
-	background-size: 1440px 800px;
+	background: url(assets/img/Classroom.jpg);
 	background-repeat: no-repeat;
 	display: compact;
+	  /* Full height */
+	height: 100%;
+	
+	  /* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
 }
 </style>
 </head>
@@ -32,13 +39,7 @@ body {
 				<li class="active"><a href="/eLearningApplication">Home</a></li>
 				<li><a href="content/signup.jsp">Signup</a></li>
 				<li><a href="content/login.jsp">Login</a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Explore<b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Contact us</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Further Actions</a></li>
-					</ul></li>
+				
 			</ul>
 		</div>
 		<!-- /.nav-collapse -->
