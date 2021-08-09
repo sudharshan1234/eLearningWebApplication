@@ -57,6 +57,7 @@
 				<li><a href="/eLearningApplication">Home</a></li>
 				<li class="active"><a href="signup.jsp">Signup</a></li>
 				<li><a href="login.jsp">Login</a></li>
+				<li class="active"><a href="LogOutController">Logout</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Explore<b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -109,7 +110,7 @@
 							<fieldset>
 								<legend>Course Enrollment Form</legend>
 																
-								<div class="form-group">
+								<!--  <div class="form-group">
 									<label for="CourseIdInput" class="col-lg-3 control-label">Choose
 										Course</label>
 									<div class="col-lg-9">
@@ -118,6 +119,18 @@
 										  <option value="112">C Programming</option>
 										  <option value="113">C++ Programming</option>
 										</select>
+									</div>
+								</div>-->
+								
+								<div class="form-group">
+									<label for="CourseIdInput" class="col-lg-3 control-label">Choose
+											Course</label>
+									<div class="col-lg-9">							
+									<select name="courseId" id="CourseIdInput">
+									    <c:forEach items="${listCourse}" var="course">
+								            <option value="${course.key}">${course.value}</option>
+									    </c:forEach>
+									</select>  
 									</div>
 								</div>
 								

@@ -58,6 +58,7 @@
 				<li><a href="/eLearningApplication">Home</a></li>
 				<li class="active"><a href="signup.jsp">Signup</a></li>
 				<li><a href="login.jsp">Login</a></li>
+				<li class="active"><a href="LogOutController">Logout</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Explore<b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -107,18 +108,23 @@
 						<form id="myForm" method="post" class="bs-example form-horizontal"
 							action="feedback">
 							<fieldset>
-								<legend>Enter your feedback</legend>								
-								<!-- <select name='course'>
-								    <option value="${selected}" selected>${selected}</option>
-								    <c:forEach items="${listCourse}" var="course">
-								        <c:if test="${course != selected}">
-								            <option value="${course}">${course}</option>
-								        </c:if>
-								    </c:forEach>
-								</select>  -->
-								
-								
+								<legend>Enter your feedback</legend>	
 								<div class="form-group">
+									<label for="course" class="col-lg-3 control-label">Choose
+											Course</label>
+									<div class="col-lg-9">							
+									<select name='course'>
+									    <option value="${selected}" selected>${selected}</option>
+									    <c:forEach items="${listCourse}" var="course">
+									        <c:if test="${course != selected}">
+									            <option value="${course}">${course}</option>
+									        </c:if>
+									    </c:forEach>
+									</select>  
+									</div>
+								</div>
+								
+								<!--<div class="form-group">
 									<label for="course" class="col-lg-3 control-label">Choose
 										Course</label>
 									<div class="col-lg-9">
@@ -129,7 +135,7 @@
 										  <option value="General Feedback">General Feedback</option>
 										</select>
 									</div>
-								</div>
+								</div> -->
 
 
 								<div class="form-group">

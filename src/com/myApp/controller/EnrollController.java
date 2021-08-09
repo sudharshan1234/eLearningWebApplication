@@ -2,6 +2,9 @@ package com.myApp.controller;
 
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -25,7 +28,7 @@ import org.apache.log4j.Logger;
 @WebServlet("/enroll")
 public class EnrollController extends HttpServlet {
 	private EnrollRepository enrollRepository;
-	static Logger log = Logger.getLogger(FeedbackRepository.class.getName());  
+//	static Logger log = Logger.getLogger(EnrollController.class.getName());  
 	private static String app_ENROLL = "content/enroll.jsp";
 	private static String LOGIN_SUCCESS = "content/success.jsp";
 	private static String LOGIN_FAILURE = "content/failure.jsp";
@@ -47,6 +50,8 @@ public class EnrollController extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session=request.getSession();
 		String val=(String) session.getAttribute("logged");
+		String nameVal=(String) session.getAttribute("userName");
+//		log.info(val+" logged value "+nameVal);
 		if(val==null) {
 			String forward = LOGIN_FAILURE;
 			request.setAttribute("failMessage", "Please Login First!");
@@ -55,8 +60,9 @@ public class EnrollController extends HttpServlet {
 		}
 		else {
 		String forward = app_ENROLL;
+		HashMap<String,String> listCourse=(HashMap<String, String>) enrollRepository.list();
+		request.setAttribute("listCourse", listCourse);
 		RequestDispatcher view = request.getRequestDispatcher(forward);
-
 		view.forward(request, response);
 		}
 	}
@@ -94,7 +100,6 @@ public class EnrollController extends HttpServlet {
 				view.forward(request, response);
 			
 		}
-		RequestDispatcher view = request.getRequestDispatcher(forward);
-		view.forward(request, response);
+
 	}
 }

@@ -35,6 +35,7 @@
 				<li><a href="/eLearningApplication">Home</a></li>
 				<li><a href="content/signup.jsp">Signup</a></li>
 				<li class="active"><a href="content/login.jsp">Login</a></li>
+				<li class="active"><a href="LogOutController">Logout</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Explore<b class="caret"></b></a>
 					<ul class="dropdown-menu">

@@ -4,6 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import com.myApp.model.Course;
 import com.myApp.model.User1;
@@ -46,6 +50,26 @@ public class EnrollRepository {
 	          e.printStackTrace();
 	      }
 		return false;
+	}
+
+	public Map<String,String> list() {
+		Map<String,String> listCourse = new HashMap<>();
+        try {
+        	PreparedStatement prepStatement = dbConnection.prepareStatement("select course_id, c_name from course");
+	         
+            ResultSet result = prepStatement.executeQuery();
+             
+            while (result.next()) {
+                String cName = result.getString("c_name");
+                String cId = result.getString("course_id");
+                listCourse.put(cId, cName);
+                
+            }          
+             
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }      
+		return listCourse;
 	}
 	  
 }

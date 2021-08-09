@@ -39,8 +39,9 @@ public class AppController extends HttpServlet {
 	 *      response)
 	 */
 	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {	
-		request.setAttribute("logged","false");
+			HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session=request.getSession();  
+        session.setAttribute("logged", "false");
 		String forward = app_SIGNUP;
 		RequestDispatcher view = request.getRequestDispatcher(forward);
 		view.forward(request, response);

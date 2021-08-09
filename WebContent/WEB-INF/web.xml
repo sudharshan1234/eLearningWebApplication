@@ -52,6 +52,16 @@
   	<url-pattern>/FeedbackController</url-pattern>
   </servlet-mapping>
   
+   <servlet>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<servlet-class>com.myApp.controller.LogOutController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<url-pattern>/LogOutController</url-pattern>
+  </servlet-mapping>
+  
   
 
   
