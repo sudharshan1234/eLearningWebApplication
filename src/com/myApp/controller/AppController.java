@@ -22,7 +22,6 @@ public class AppController extends HttpServlet {
 	private AppRepository appRepository;
 
 	private static String app_SIGNUP = "content/signup.jsp";
-	private static String app_LOGIN = "content/login.jsp";
 	private static String LOGIN_SUCCESS = "content/success.jsp";
 	private static String LOGIN_FAILURE = "content/failure.jsp";
 
@@ -40,8 +39,6 @@ public class AppController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session=request.getSession();  
-        session.setAttribute("logged", "false");
 		String forward = app_SIGNUP;
 		RequestDispatcher view = request.getRequestDispatcher(forward);
 		view.forward(request, response);

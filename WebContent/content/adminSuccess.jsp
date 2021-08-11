@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Login Success</title>
+<title>Admin Login Success</title>
 <link href="/eLearningApplication/assets/css/bootstrap-united.css" rel="stylesheet" />
 
 </head>
@@ -34,13 +34,15 @@
 				<li><a href="/eLearningApplication">Home</a></li>
 				<li class="active"><a href="LogOutController">Logout</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Explore<b class="caret"></b></a>
+					data-toggle="dropdown">Admin Access<b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="contact">Add Contact</a></li>
+						<li><a href="AdminCourseController">View Course</a></li>
 						<li class="divider"></li>
-						<li><a href="enroll">Enroll Course</a></li>
+						<li><a href="AdminContactController">View Contact</a></li>
 						<li class="divider"></li>
-						<li><a href="feedback">Add Feedback</a></li>
+						<li><a href="AdminFeedbackController">View Feedback</a></li>
+						<li class="divider"></li>
+						<li><a href="AdminUsersController">View Users</a></li>
 					</ul></li>
 			</ul>
 		</div>

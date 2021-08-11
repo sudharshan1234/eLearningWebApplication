@@ -39,6 +39,7 @@ body {
 				<li class="active"><a href="/eLearningApplication">Home</a></li>
 				<li><a href="content/signup.jsp">Signup</a></li>
 				<li><a href="content/login.jsp">Login</a></li>
+				<li><a href="content/adminLogin.jsp">Admin Login</a></li>
 				
 			</ul>
 		</div>
@@ -53,7 +54,8 @@ body {
 			</div>
 
 			<a class="btn btn-primary" href="content/signup.jsp">Signup » </a> <a
-				class="btn btn-primary" href="content/login.jsp">Login » </a>
+				class="btn btn-primary" href="content/login.jsp">Login » </a>  <a
+				class="btn btn-primary" href="content/adminLogin.jsp">Admin Login » </a>
 		</div>
 
 		<div></div>

@@ -87,8 +87,7 @@ public class AppRepository {
 		  
 		  ArrayList out=new ArrayList<>();
           try {
-			PreparedStatement prepStatement = dbConnection.prepareStatement("select password from user1 where email = ?");
-			  prepStatement = dbConnection.prepareStatement("select user_id,name from user1 where email= ? and password= ? ");
+        	  PreparedStatement prepStatement = dbConnection.prepareStatement("select user_id,name from user1 where email= ? and password= ? ");
 			  prepStatement.setString(1, email);
 			  prepStatement.setString(2, password);
 			  ResultSet rs = prepStatement.executeQuery();

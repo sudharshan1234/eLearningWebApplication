@@ -1,13 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isThreadSafe="false"  %>
+<%@ page isELIgnored="false" %> 
+<%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Add Contact</title>
+<title>List of Courses</title>
 <link href="/eLearningApplication/bootstrap/css/bootstrap.css" rel="stylesheet" />
 <link href="/eLearningApplication/datepicker/css/datepicker.css" rel="stylesheet" />
 <link href="/eLearningApplication/assets/css/bootstrap-united.css" rel="stylesheet" />
@@ -57,13 +58,15 @@
 				<li><a href="/eLearningApplication">Home</a></li>
 				<li class="active"><a href="LogOutController">Logout</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Explore<b class="caret"></b></a>
+					data-toggle="dropdown">Admin Access<b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="contact">Add Contact</a></li>
+						<li><a href="AdminCourseController">View Course</a></li>
 						<li class="divider"></li>
-						<li><a href="enroll">Enroll Course</a></li>
+						<li><a href="AdminContactController">View Contact</a></li>
 						<li class="divider"></li>
-						<li><a href="feedback">Add Feedback</a></li>
+						<li><a href="AdminFeedbackController">View Feedback</a></li>
+						<li class="divider"></li>
+						<li><a href="AdminUsersController">View Users</a></li>
 					</ul></li>
 			</ul>
 		</div>
@@ -86,7 +89,7 @@
 	<div class="container">
 		<div class="jumbotron">
 			<div>
-				<h1>Add Contacts</h1>
+				<h1>View Courses</h1>
 			</div>
 		</div>
 
@@ -102,78 +105,37 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
-						<form id="myForm" method="post" class="bs-example form-horizontal"
-							action="contact">
+						<form id="myForm" method="post" class="bs-example form-horizontal">
 							<fieldset>
-								<legend>Contact Addition Form</legend>
-								
-								<div class="form-group">
-									<label for="NameInput" class="col-lg-3 control-label">
-										Name</label>
-									<div class="col-lg-9">
-										<input type="text" class="form-control" name="name"
-											id="NameInput" placeholder="Name" />
-									</div>
-								</div>
-
-
-								<div class="form-group">
-									<label for="phoneNumberInput" class="col-lg-3 control-label">Phone
-										Number</label>
-									<div class="col-lg-9">
-										<input type="text" class="form-control" name="phoneNumber"
-											id="phoneNumberInput" placeholder="Phone Number" />
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label for="emailInput" class="col-lg-3 control-label">E
-										Mail</label>
-									<div class="col-lg-9">
-										<input type="text" class="form-control" name="email"
-											id="emailInput" placeholder="E Mail" />
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label for="MessageInput" class="col-lg-3 control-label">
-										Message</label>
-									<div class="col-lg-9">
-										<input type="text" class="form-control" name="message"
-											id="MessageInput" placeholder="Message" onkeyup="success()" />
-									</div>
-								</div>
-								
-
-								<div class="col-lg-9 col-lg-offset-3">
-
-									<button class="btn btn-primary" data-toggle="modal"
-										data-target="#themodal">Submit</button>
-									<div id="themodal" class="modal fade" data-backdrop="static">
-										<div class="modal-dialog">
-											<div class="modal-content">
-												<div class="modal-header">
-													<button type="button" class="close" data-dismiss="modal"
-														aria-hidden="true">&times;</button>
-													<h3>Add Contact</h3>
-												</div>
-												<div class="modal-body">
-													<p>Do you want to add this contact?</p>
-													<div class="progress progress-striped active">
-														<div id="doitprogress" class="progress-bar"></div>
-													</div>
-												</div>
-												<div class="modal-footer">
-													<a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
-													<input type="submit" value="Yes" id="yesbutton"
-														class="btn btn-primary" data-loading-text="Saving.."
-														data-complete-text="Submit Complete!" disabled>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
+								<center>
+							        <h1>Course Management</h1>
+							    </center>
+							    
+									<div align="center">
+								        <table border="1" cellpadding="5">
+								            <caption><h2>List of Courses</h2></caption>
+								            <caption><h2>
+									            <a href="AdminCourseAddController">Add New Course</a>									             
+									        </h2></caption>
+								            <tr>
+								                <th>ID</th>
+								                <th>Name</th>
+								                <th>Desp</th>
+								                <th>Fees</th>
+								                <th>Resource</th>
+								            </tr>
+								            <c:forEach var="course" items="${listCourse}">
+								                <tr>
+								                    <td><c:out value="${course.courseId}" /></td>
+								                    <td><c:out value="${course.cName}" /></td>
+								                    <td><c:out value="${course.cDesp}" /></td>
+								                    <td><c:out value="${course.cFees}" /></td>
+								                    <td><c:out value="${course.cResource}" /></td>
+							                 
+								                </tr>
+								            </c:forEach>
+								        </table>
+								    </div>   
 
 							</fieldset>
 						</form>
@@ -191,17 +153,14 @@
 	
 	<script type="text/javascript">
 	function success() {
-	 if(document.getElementById("NameInput").value==="" && 
-			 document.getElementById("phoneNumberInput").value==="" &&
-			 document.getElementById("emailInput").value==="" &&
-			 document.getElementById("MessageInput").value==="") { 
+	 if(document.getElementById("FeedbackMessageInput").value==="") { 
             document.getElementById('yesbutton').disabled = true; 
         } else { 
             document.getElementById('yesbutton').disabled = false;
         }
     }
 	</script>
-	
+
 	<script type="text/javascript">
 		$(function() {
 			var yesButton = $("#yesbutton");

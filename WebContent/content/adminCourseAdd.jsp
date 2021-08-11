@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Add Contact</title>
+<title>Admin Add Course</title>
 <link href="/eLearningApplication/bootstrap/css/bootstrap.css" rel="stylesheet" />
 <link href="/eLearningApplication/datepicker/css/datepicker.css" rel="stylesheet" />
 <link href="/eLearningApplication/assets/css/bootstrap-united.css" rel="stylesheet" />
@@ -57,13 +57,15 @@
 				<li><a href="/eLearningApplication">Home</a></li>
 				<li class="active"><a href="LogOutController">Logout</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Explore<b class="caret"></b></a>
+					data-toggle="dropdown">Admin Access<b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="contact">Add Contact</a></li>
+						<li><a href="AdminCourseController">View Course</a></li>
 						<li class="divider"></li>
-						<li><a href="enroll">Enroll Course</a></li>
+						<li><a href="AdminContactController">View Contact</a></li>
 						<li class="divider"></li>
-						<li><a href="feedback">Add Feedback</a></li>
+						<li><a href="AdminFeedbackController">View Feedback</a></li>
+						<li class="divider"></li>
+						<li><a href="AdminUsersController">View Users</a></li>
 					</ul></li>
 			</ul>
 		</div>
@@ -86,7 +88,7 @@
 	<div class="container">
 		<div class="jumbotron">
 			<div>
-				<h1>Add Contacts</h1>
+				<h1>Admin Add Course</h1>
 			</div>
 		</div>
 
@@ -103,44 +105,44 @@
 				<div class="row">
 					<div class="col-lg-6">
 						<form id="myForm" method="post" class="bs-example form-horizontal"
-							action="contact">
+							action="AdminCourseAddController">
 							<fieldset>
-								<legend>Contact Addition Form</legend>
+								<legend>Course Addition Form</legend>
 								
 								<div class="form-group">
-									<label for="NameInput" class="col-lg-3 control-label">
-										Name</label>
+									<label for="CourseNameInput" class="col-lg-3 control-label">
+										Course Name</label>
 									<div class="col-lg-9">
-										<input type="text" class="form-control" name="name"
-											id="NameInput" placeholder="Name" />
+										<input type="text" class="form-control" name="courseName"
+											id="CourseNameInput" placeholder="Name" />
 									</div>
 								</div>
 
 
 								<div class="form-group">
-									<label for="phoneNumberInput" class="col-lg-3 control-label">Phone
-										Number</label>
+									<label for="courseDespInput" class="col-lg-3 control-label">
+										Course Desp</label>
 									<div class="col-lg-9">
-										<input type="text" class="form-control" name="phoneNumber"
-											id="phoneNumberInput" placeholder="Phone Number" />
+										<input type="text" class="form-control" name=courseDesp
+											id="courseDespInput" placeholder="Course Desp" />
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="emailInput" class="col-lg-3 control-label">E
-										Mail</label>
+									<label for="CourseFeesInput" class="col-lg-3 control-label">Course
+										Fees</label>
 									<div class="col-lg-9">
-										<input type="text" class="form-control" name="email"
-											id="emailInput" placeholder="E Mail" />
+										<input type="text" class="form-control" name="courseFees"
+											id="CourseFeesInput" placeholder="Course Fees" />
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="MessageInput" class="col-lg-3 control-label">
-										Message</label>
+									<label for="ResourceInput" class="col-lg-3 control-label">
+										Course Resource</label>
 									<div class="col-lg-9">
-										<input type="text" class="form-control" name="message"
-											id="MessageInput" placeholder="Message" onkeyup="success()" />
+										<input type="text" class="form-control" name="courseResource"
+											id="ResourceInput" placeholder="Resource" onkeyup="success()" />
 									</div>
 								</div>
 								
@@ -155,10 +157,10 @@
 												<div class="modal-header">
 													<button type="button" class="close" data-dismiss="modal"
 														aria-hidden="true">&times;</button>
-													<h3>Add Contact</h3>
+													<h3>Add Course</h3>
 												</div>
 												<div class="modal-body">
-													<p>Do you want to add this contact?</p>
+													<p>Do you want to add this Course?</p>
 													<div class="progress progress-striped active">
 														<div id="doitprogress" class="progress-bar"></div>
 													</div>
@@ -191,10 +193,10 @@
 	
 	<script type="text/javascript">
 	function success() {
-	 if(document.getElementById("NameInput").value==="" && 
-			 document.getElementById("phoneNumberInput").value==="" &&
-			 document.getElementById("emailInput").value==="" &&
-			 document.getElementById("MessageInput").value==="") { 
+	 if(document.getElementById("CourseNameInput").value==="" && 
+			 document.getElementById("courseDespInput").value==="" &&
+			 document.getElementById("CourseFeesInput").value==="" &&
+			 document.getElementById("ResourceInput").value==="") { 
             document.getElementById('yesbutton').disabled = true; 
         } else { 
             document.getElementById('yesbutton').disabled = false;

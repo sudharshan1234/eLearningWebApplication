@@ -62,6 +62,66 @@
   	<url-pattern>/LogOutController</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>AdminServlet</servlet-name>
+  	<servlet-class>com.myApp.controller.AdminController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AdminServlet</servlet-name>
+  	<url-pattern>/AdminController</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>AdminCourseServlet</servlet-name>
+  	<servlet-class>com.myApp.controller.AdminCourseController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AdminCourseServlet</servlet-name>
+  	<url-pattern>/AdminCourseController</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+  	<servlet-name>AdminFeedbackServlet</servlet-name>
+  	<servlet-class>com.myApp.controller.AdminFeedbackController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AdminFeedbackServlet</servlet-name>
+  	<url-pattern>/AdminFeedbackController</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+  	<servlet-name>AdminUsersServlet</servlet-name>
+  	<servlet-class>com.myApp.controller.AdminUsersController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AdminUsersServlet</servlet-name>
+  	<url-pattern>/AdminUsersController</url-pattern>
+  </servlet-mapping>
+  
+       <servlet>
+  	<servlet-name>AdminCourseAddServlet</servlet-name>
+  	<servlet-class>com.myApp.controller.AdminCourseAddController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AdminCourseAddServlet</servlet-name>
+  	<url-pattern>/AdminCourseAddController</url-pattern>
+  </servlet-mapping>
+  
+       <servlet>
+  	<servlet-name>AdminContactServlet</servlet-name>
+  	<servlet-class>com.myApp.controller.AdminContactController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AdminContactServlet</servlet-name>
+  	<url-pattern>/AdminContactController</url-pattern>
+  </servlet-mapping>
+  
   
 
   
